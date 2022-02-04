@@ -6,9 +6,10 @@
 </head>
 <body>
 <h3>数字を入れてください</h3>
-	<form action="finished" th:action="@{exam02/result}" method="post">
-		<input type="text" name="num1"> + 
-		<input type="text" name="num2"> =
+	<form action="finished" th:action="@{exam02/result}" method="post"
+	 th:object="${add}">
+		<input type="text" name="num1" th:field="*{num1}"> + 
+		<input type="text" name="num2" th:field="*{num2}"> =
 		<button>足し算をする</button>
 	
 	</form>
