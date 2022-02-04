@@ -16,13 +16,15 @@ public class Exam04Controller {
 		return new UserForm();
 	}
 	@RequestMapping("")
-	public String indeX() {
+	public String index() {
 		return "exam04";
 	}
 	@RequestMapping("/result")
-	public String result(String name,Model model) {
+	public String result(String name,String comment,Integer age,Model model) {
 		System.out.println(name);
 		model.addAttribute("name",name);
+		model.addAttribute("age",age);
+		model.addAttribute("comment",comment);
 		return "exam04-result";
 	}
 }
