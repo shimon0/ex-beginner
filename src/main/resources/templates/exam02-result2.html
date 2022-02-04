@@ -5,9 +5,11 @@
 <title>演習１</title>
 </head>
 <body>
-<h1>足し算結果</h1>
-<span th:text="${session.num1}">dummy</span> + <span th:text="${session.num2}">dummy</span> = 
-<span th:text="${session.answer}">dummy</span>
+<h1>合計金額</h1>
+■税抜金額<br>
+<span th:text="${application.sum}">dummy</span>円<br>
+■税込価格
+<span th:text="${application.inSum}">dummy</span>円
 	
 	
 </body>
